@@ -33,7 +33,7 @@ investigations when auditing is enabled and events are collected.
   4732       |Member added to a security-enabled local group
   7045       |A service was installed (commonly from the System log)
 
-![Screenshot](/screenshots/03_spl.png)
+![Screenshot](./screenshots/03_spl.png)
 
 Event details and field names vary. Event ID alone does not establish
 malicious intent.
@@ -45,7 +45,7 @@ index=Windowslogs.csv event_id="4625"
 | table timestamp user source_ip dest_ip 
 | sort - timestamp 
 ```
-![Screenshot](/screenshots/01_spl.png)
+![Screenshot](./screenshots/01_spl.png)
 Replace the index and field names with those available in your
 environment. Some data sets use `EventID` rather than `EventCode`.
 
@@ -56,7 +56,7 @@ index=windows index=main event_id="4688"
 | table timestamp user event_name source_ip process_name command_line 
 | sort - timestamp
 ```
-![Screenshot](/screenshots/02_spl.png)
+![Screenshot](./screenshots/02_spl.png)
 
 Command-line fields may be absent if the relevant auditing is not
 enabled or the ingestion pipeline does not extract them.
